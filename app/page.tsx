@@ -3,6 +3,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string | null;
+  video?: string;
+};
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
@@ -21,14 +29,14 @@ export default function Home() {
     sessionStorage.setItem('theme', value ? 'dark' : 'light');
   };
 
-  const dayProjects = [
+  const dayProjects: Project[] = [
     { id: 1, title: "Adobe Acrobat", description: "I crafted design principles around AI.", image: "/project-1.png", video: "/acrobat-video.mov" },
     { id: 2, title: "Zenni Opticals", description: "I built process that got our app to #1 glasses app.", image: "/project-2.png" },
     { id: 3, title: "WhatsApp Payments", description: "I designed and launched payments in Brazil.", image: "/whatsapp-payments.gif" },
     { id: 4, title: "Instagram Live", description: "I designed and launched parts of creator monetization.", image: null },
   ];
 
-  const nightProjects = [
+  const nightProjects: Project[] = [
     { id: 1, title: "Stampbook", description: "I put digital stamps around the world so people can collect while traveling.", image: null },
     { id: 2, title: "Goodnight Journal", description: "I designed a simple journal with breathing exercise to reflect every night.", image: null },
   ];
