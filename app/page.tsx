@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 type Project = {
@@ -9,64 +9,6 @@ type Project = {
   description: string;
   image: string | null;
   video?: string;
-};
-
-// Lazy-loading video component
-const LazyVideo = ({ src, className, style }: { src: string; className?: string; style?: React.CSSProperties }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // Reset loaded state when src changes
-    setIsLoaded(false);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsLoaded(true);
-          }
-        });
-      },
-      {
-        threshold: 0.5, // Load when 50% visible
-      }
-    );
-
-    observer.observe(video);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [src]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video || !isLoaded) return;
-
-    // Load and play video when loaded
-    video.load();
-    video.play().catch(() => {
-      // Ignore autoplay errors
-    });
-  }, [isLoaded]);
-
-  return (
-    <video
-      ref={videoRef}
-      muted
-      loop
-      playsInline
-      className={className}
-      style={style}
-      preload="metadata"
-    >
-      {isLoaded && <source src={src} type="video/mp4" />}
-    </video>
-  );
 };
 
 export default function Home() {
@@ -203,23 +145,33 @@ export default function Home() {
                         // Portrait video for Goodnight Journal, Zenni Opticals, Instagram Live, Stampbook, and WhatsApp Payments
                         <div className="flex items-center justify-center transition-transform duration-500 group-hover:scale-105" style={{ width: '100%', height: '100%' }}>
                           <div className="rounded-[15px] md:rounded-[20px] overflow-hidden" style={{ maxHeight: '75%', height: '100%' }}>
-                            <LazyVideo 
-                              key={`${project.id}-${project.video}`}
-                              src={project.video}
+                            <video 
+                              autoPlay
+                              muted
+                              loop
+                              playsInline
+                              key={project.video}
                               className="h-full w-auto object-contain"
                               style={{ maxHeight: '100%', display: 'block' }}
-                            />
+                            >
+                              <source src={project.video} type="video/mp4" />
+                            </video>
                           </div>
                         </div>
                       ) : (
                         // Regular rounded rectangle for other videos
                         <div className="rounded-[15px] md:rounded-[20px] overflow-hidden" style={{ width: '80%', height: '80%' }}>
-                          <LazyVideo 
-                            key={`${project.id}-${project.video}`}
-                            src={project.video}
+                          <video 
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            key={project.video}
                             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                             style={{ transform: 'scale(1.01)', marginBottom: '-1px' }}
-                          />
+                          >
+                            <source src={project.video} type="video/mp4" />
+                          </video>
                         </div>
                       )
                     ) : project.image ? (
