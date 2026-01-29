@@ -24,3 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Prevent dark mode flash on navigation */
+html.dark-mode {
+  background-color: #000000;
+  color: white;
+}
+
+html.dark-mode body {
+  background-color: #000000;
+  color: white;
+}
