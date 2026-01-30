@@ -261,7 +261,7 @@ export default function Home() {
               </a>
               ! View{' '}
               <a href="/Hiroo-Resume.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
-                resume
+                Resume
               </a>
             </p>
           </div>
