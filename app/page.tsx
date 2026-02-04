@@ -14,6 +14,7 @@ type Project = {
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
 
   // Load saved theme preference on mount (persists through refresh, not browser close)
   useEffect(() => {
@@ -83,6 +84,21 @@ export default function Home() {
     setCurrentPhotoIndex((prev) => (prev - 1 + photos.length) % photos.length);
   };
 
+  const tooltips = {
+    designer: "I like observing and listening to users",
+    coder: "Fueling the itch to create",
+    photographer: "Canon R8 24-105 @hirooaoy_",
+    volleyball: "Setter • Supporting Team Japan"
+  };
+
+  const showTooltip = (key: string) => {
+    setActiveTooltip(key);
+  };
+
+  const hideTooltip = () => {
+    setActiveTooltip(null);
+  };
+
   return (
     <div className={`min-h-screen transition-colors duration-700 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <div className="max-w-[1200px] mx-auto px-8 md:px-16 pt-48 md:pt-80 pb-48 md:pb-64">
@@ -99,8 +115,22 @@ export default function Home() {
                 >
                   Day time
                 </button>
-                <p className={`transition-opacity duration-500 ${!isDarkMode ? 'opacity-100' : 'opacity-0'}`}>
-                  Product Designer
+                <p className={`transition-opacity duration-500 ${!isDarkMode ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                  <span className="relative inline-block">
+                    <span 
+                      className="cursor-palette"
+                      onMouseEnter={() => showTooltip('designer')}
+                      onMouseLeave={hideTooltip}
+                    >
+                      Product Designer
+                    </span>
+                    {activeTooltip === 'designer' && (
+                      <span className="absolute left-0 top-full mt-2 bg-black text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                        {tooltips.designer}
+                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black"></span>
+                      </span>
+                    )}
+                  </span>
                 </p>
               </div>
               <div className="flex items-start gap-4 md:gap-32">
@@ -110,8 +140,52 @@ export default function Home() {
                 >
                   Night time
                 </button>
-                <p className={`transition-opacity duration-500 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`}>
-                  Vibe coder, photographer, volleyball enthusiast
+                <p className={`transition-opacity duration-500 ${isDarkMode ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                  <span className="relative inline-block">
+                    <span 
+                      className="cursor-laptop"
+                      onMouseEnter={() => showTooltip('coder')}
+                      onMouseLeave={hideTooltip}
+                    >
+                      Vibe coder
+                    </span>
+                    {activeTooltip === 'coder' && (
+                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                        {tooltips.coder}
+                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
+                      </span>
+                    )}
+                  </span>
+                  , <span className="relative inline-block">
+                    <span 
+                      className="cursor-camera"
+                      onMouseEnter={() => showTooltip('photographer')}
+                      onMouseLeave={hideTooltip}
+                    >
+                      photographer
+                    </span>
+                    {activeTooltip === 'photographer' && (
+                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                        {tooltips.photographer}
+                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
+                      </span>
+                    )}
+                  </span>
+                  , <span className="relative inline-block">
+                    <span 
+                      className="cursor-volleyball"
+                      onMouseEnter={() => showTooltip('volleyball')}
+                      onMouseLeave={hideTooltip}
+                    >
+                      volleyball enthusiast
+                    </span>
+                    {activeTooltip === 'volleyball' && (
+                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                        {tooltips.volleyball}
+                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
+                      </span>
+                    )}
+                  </span>
                 </p>
               </div>
             </div>
