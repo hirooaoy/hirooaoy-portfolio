@@ -125,7 +125,7 @@ export default function Home() {
                       Product Designer
                     </span>
                     {activeTooltip === 'designer' && (
-                      <span className="absolute left-0 top-full mt-2 bg-black text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                      <span className="absolute left-0 top-full mt-2 bg-black text-white px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
                         {tooltips.designer}
                         <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black"></span>
                       </span>
@@ -150,7 +150,7 @@ export default function Home() {
                       Vibe coder
                     </span>
                     {activeTooltip === 'coder' && (
-                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
                         {tooltips.coder}
                         <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
                       </span>
@@ -165,7 +165,7 @@ export default function Home() {
                       photographer
                     </span>
                     {activeTooltip === 'photographer' && (
-                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
                         {tooltips.photographer}
                         <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
                       </span>
@@ -180,7 +180,7 @@ export default function Home() {
                       volleyball enthusiast
                     </span>
                     {activeTooltip === 'volleyball' && (
-                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 shadow-lg">
+                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
                         {tooltips.volleyball}
                         <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
                       </span>
@@ -320,7 +320,7 @@ export default function Home() {
           <div className="max-w-[800px] space-y-4 leading-relaxed">
             <p>Somewhere between chasing career ladders and comparing myself to others, I started to forget why I chose design. It started to feel like just a job.</p>
             
-            <p>Before it was a job, design was something I did during hackathons and personal projects. I loved seeing people connect with what I made. Hearing "this is cool" sparked real joy.</p>
+            <p>Before it was a job, design was something I did during hackathons and personal projects. I loved seeing people connect with what I made. Hearing "this is cool" <span className="cursor-sparkles">sparked real joy</span>.</p>
             
             <p>I want to work with people I can co-design with, where design is more than a job. Design is a rewarding process to connect with people and make someone's life better.</p>
             
