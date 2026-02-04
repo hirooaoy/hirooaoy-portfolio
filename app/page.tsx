@@ -125,9 +125,9 @@ export default function Home() {
                       Product Designer
                     </span>
                     {activeTooltip === 'designer' && (
-                      <span className="absolute left-0 top-full mt-2 bg-black text-white px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
+                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-black text-white px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
                         {tooltips.designer}
-                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black"></span>
+                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black"></span>
                       </span>
                     )}
                   </span>
@@ -150,9 +150,9 @@ export default function Home() {
                       Vibe coder
                     </span>
                     {activeTooltip === 'coder' && (
-                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
+                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
                         {tooltips.coder}
-                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
+                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
                       </span>
                     )}
                   </span>
@@ -165,9 +165,9 @@ export default function Home() {
                       photographer
                     </span>
                     {activeTooltip === 'photographer' && (
-                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
+                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
                         {tooltips.photographer}
-                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
+                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
                       </span>
                     )}
                   </span>
@@ -180,9 +180,9 @@ export default function Home() {
                       volleyball enthusiast
                     </span>
                     {activeTooltip === 'volleyball' && (
-                      <span className="absolute left-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg max-w-[200px] md:max-w-none md:whitespace-nowrap">
+                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
                         {tooltips.volleyball}
-                        <span className="absolute left-4 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
+                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
                       </span>
                     )}
                   </span>
