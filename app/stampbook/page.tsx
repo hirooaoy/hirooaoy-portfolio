@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import GlitchTitle from "../components/glitch-title";
 
 export default function Stampbook() {
   const scrollToTop = () => {
@@ -17,7 +18,7 @@ export default function Stampbook() {
         </Link>
 
         {/* Project Content */}
-        <h1 className="text-4xl font-normal mb-16">Stampbook</h1>
+        <GlitchTitle text="Stampbook" className="text-4xl font-normal mb-16" />
 
         {/* Project Content */}
         <div className="space-y-16">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import GlitchTitle from "../components/glitch-title";
 
 export default function AdobeAcrobat() {
   const scrollToTop = () => {
@@ -17,7 +18,7 @@ export default function AdobeAcrobat() {
         </Link>
 
         {/* Project Content */}
-        <h1 className="text-4xl font-normal mb-16">Adobe Acrobat</h1>
+        <GlitchTitle text="Adobe Acrobat" className="text-4xl font-normal mb-16" />
 
         {/* Project Content */}
         <div className="space-y-16">
@@ -25,10 +26,10 @@ export default function AdobeAcrobat() {
           <section className="space-y-4">
             <h2 className="text-2xl font-normal">The brief</h2>
             <p className="text-lg leading-relaxed">
-              Millions of people use Acrobat to read, create, and share PDFs, but AI features <strong>struggled to gain adoption</strong>.
+              300M+ people come to Acrobat to read PDFs such as business reports and textbooks. With AI, we empower people to consume content faster and dive deeper.
             </p>
             <p className="text-lg leading-relaxed">
-              I defined a set of <strong>AI design principles</strong> to help Acrobat teams balance speed vs quality, build trust through transparency, and decide when AI should ask for input vs act autonomously. I led the application of these principles across multiple AI features in Acrobat, including podcast and presentation generation.
+              One of our bets was on AI artifacts, where people can transform PDFs into engaging formats such as podcasts and flashcards. <strong>I led the horizontal framework</strong>, including the AI conversation model, discovery, navigation, and design system.
             </p>
           </section>
 
@@ -39,21 +40,23 @@ export default function AdobeAcrobat() {
               {/* Presentation UI - Main Image */}
               <div className="w-full">
                 <Image 
-                  src="/acrobat-presentation-ui-optimized.jpg" 
+                  src="/frame-2087327552.jpg" 
                   alt="Adobe Acrobat presentation creation interface"
-                  width={3000}
-                  height={1755}
-                  quality={90}
+                  width={10930}
+                  height={6395}
+                  quality={100}
+                  unoptimized
+                  priority
                   className="w-full h-auto"
                 />
               </div>
               {/* Second Image - New */}
               <div className="w-full">
                 <Image 
-                  src="/acrobat-image-2.jpg" 
+                  src="/frame-2087327553-1.jpg" 
                   alt="Adobe Acrobat AI design principles"
-                  width={9180}
-                  height={5372}
+                  width={10930}
+                  height={6395}
                   quality={90}
                   className="w-full h-auto"
                 />
@@ -61,15 +64,26 @@ export default function AdobeAcrobat() {
               {/* Third Image */}
               <div className="w-full">
                 <Image 
-                  src="/acrobat-second-image.jpg" 
+                  src="/frame-2087327547.jpg" 
                   alt="Adobe Acrobat AI workflow"
-                  width={3000}
-                  height={1755}
+                  width={8744}
+                  height={5116}
                   quality={90}
                   className="w-full h-auto"
                 />
               </div>
               {/* Fourth Image */}
+              <div className="w-full">
+                <Image 
+                  src="/frame-2087327554-4.jpg" 
+                  alt="Adobe Acrobat artifact framework details"
+                  width={4372}
+                  height={2558}
+                  quality={90}
+                  className="w-full h-auto"
+                />
+              </div>
+              {/* Fifth Image */}
               <div className="w-full">
                 <Image 
                   src="/acrobat-third-image.jpg" 
@@ -87,9 +101,9 @@ export default function AdobeAcrobat() {
           <section className="space-y-4">
             <h2 className="text-2xl font-normal">Deliverables</h2>
             <ul className="text-lg leading-relaxed space-y-2 list-disc pl-6">
-              <li>A clear set of AI design principles focused on making trade-offs (e.g. speed vs quality, input vs autonomous, first time vs returning)</li>
-              <li>End-to-end flows for podcast and presentation generation</li>
-              <li>A reusable AI component system that scaled to new artifacts like deep research reports, flashcards, and charts</li>
+              <li>User testing research report, jam workshop sessions, and a working prototype in Cursor.</li>
+              <li>A reusable AI component system that scaled to all artifacts like podcasts, flashcards, deep research reports, and practice quizzes.</li>
+              <li>End-to-end flows for all artifacts, including loading states, AI conversation model, and side panel.</li>
             </ul>
           </section>
 
@@ -97,9 +111,9 @@ export default function AdobeAcrobat() {
           <section className="space-y-4">
             <h2 className="text-2xl font-normal">Learnings</h2>
             <ul className="text-lg leading-relaxed space-y-2 list-disc pl-6">
-              <li>There are human needs and AI needs. These should be written out very clearly.</li>
-              <li><strong>Show not tell with AI.</strong> Let people see the output then iterate (don't ask people what podcast they want, just show it)</li>
-              <li>Don't expect people to write good prompts. Hand-hold them.</li>
+              <li>AI can be powerful, but also overwhelming and frustrating.</li>
+              <li>Don't expect people to write good prompts. <strong>Hand-hold them.</strong></li>
+              <li>Reading and learning are continuous. Get people in the flow.</li>
             </ul>
           </section>
 
@@ -109,8 +123,8 @@ export default function AdobeAcrobat() {
             <ul className="text-lg leading-relaxed space-y-2 list-disc pl-6">
               <li>Established AI design principles with PM and Engineering that guided decisions across Acrobat AI features</li>
               <li>AI assistant MAU grew from 2% → 10.3% (~145,000 MAU within overall PDF activity)</li>
-              <li>Podcast listening increased from ~1% → 9%</li>
-              <li>Presentation creation increased from ~0.5% → 6%</li>
+              <li>Podcast creation rate increased from 22% → 84%</li>
+              <li>Podcast listening averaged 1 minute+ and showed clear iteration behavior within the same session</li>
             </ul>
           </section>
 

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { scrambleText, startGlitchAnimation } from "../lib/glitch-text";
 
 type Project = {
   id: number;
@@ -11,10 +12,30 @@ type Project = {
   video?: string;
 };
 
+const NAME_TEXT = "Hiroo Aoyama";
+const DESIGNER_DEFAULT_TEXT = "Sr. Product Designer";
+const DESIGNER_HOVER_TEXT = "I like observing and listening to users";
+const CODER_DEFAULT_TEXT = "Vibe coder";
+const CODER_HOVER_TEXT = "I make apps";
+const PHOTOGRAPHER_DEFAULT_TEXT = "photographer";
+const PHOTOGRAPHER_HOVER_TEXT = "IG @hirooaoy_";
+const VOLLEYBALL_DEFAULT_TEXT = "volleyball enthusiast";
+const VOLLEYBALL_HOVER_TEXT = "let's go team japan!!!";
+const NAME_HOVER_TEXT = "Osaka → Shanghai → Atlanta → San Francisco";
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
-  const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState(NAME_TEXT);
+  const [designerLabel, setDesignerLabel] = useState(DESIGNER_DEFAULT_TEXT);
+  const [coderLabel, setCoderLabel] = useState(CODER_DEFAULT_TEXT);
+  const [photographerLabel, setPhotographerLabel] = useState(PHOTOGRAPHER_DEFAULT_TEXT);
+  const [volleyballLabel, setVolleyballLabel] = useState(VOLLEYBALL_DEFAULT_TEXT);
+  const designerAnimationRef = useRef<number | null>(null);
+  const coderAnimationRef = useRef<number | null>(null);
+  const photographerAnimationRef = useRef<number | null>(null);
+  const volleyballAnimationRef = useRef<number | null>(null);
+  const nameAnimationRef = useRef<number | null>(null);
 
   // Load saved theme preference on mount (persists through refresh, not browser close)
   useEffect(() => {
@@ -45,6 +66,124 @@ export default function Home() {
       sessionStorage.removeItem('homeScrollPosition');
     }
   }, []);
+
+  // Quick load-time glitch effect for the main name
+  useEffect(() => {
+    return startGlitchAnimation({
+      target: NAME_TEXT,
+      durationMs: 850,
+      frameDurationMs: 45,
+      onUpdate: setDisplayName,
+    });
+  }, []);
+
+  const stopTextAnimation = (animationRef: { current: number | null }) => {
+    if (animationRef.current !== null) {
+      window.clearInterval(animationRef.current);
+      animationRef.current = null;
+    }
+  };
+
+  const animateTextLabel = (
+    target: string,
+    setLabel: (value: string) => void,
+    animationRef: { current: number | null },
+    totalDurationMs: number = 450,
+  ) => {
+    stopTextAnimation(animationRef);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setLabel(target);
+      return;
+    }
+
+    const frameDurationMs = 30;
+    const totalFrames = Math.ceil(totalDurationMs / frameDurationMs);
+    let currentFrame = 0;
+
+    animationRef.current = window.setInterval(() => {
+      currentFrame += 1;
+      const progress = currentFrame / totalFrames;
+
+      if (progress >= 1) {
+        setLabel(target);
+        stopTextAnimation(animationRef);
+        return;
+      }
+
+      setLabel(scrambleText(target, progress));
+    }, frameDurationMs);
+  };
+
+  const animateDesignerLabel = (target: string) => {
+    animateTextLabel(target, setDesignerLabel, designerAnimationRef);
+  };
+
+  const animateCoderLabel = (target: string) => {
+    animateTextLabel(target, setCoderLabel, coderAnimationRef);
+  };
+
+  const animatePhotographerLabel = (target: string) => {
+    animateTextLabel(target, setPhotographerLabel, photographerAnimationRef);
+  };
+
+  const animateVolleyballLabel = (target: string) => {
+    animateTextLabel(target, setVolleyballLabel, volleyballAnimationRef);
+  };
+
+  const animateNameLabel = (target: string) => {
+    animateTextLabel(target, setDisplayName, nameAnimationRef, 620);
+  };
+
+  useEffect(() => {
+    return () => {
+      stopTextAnimation(designerAnimationRef);
+      stopTextAnimation(coderAnimationRef);
+      stopTextAnimation(photographerAnimationRef);
+      stopTextAnimation(volleyballAnimationRef);
+      stopTextAnimation(nameAnimationRef);
+    };
+  }, []);
+
+  const handleDesignerMouseEnter = () => {
+    animateDesignerLabel(DESIGNER_HOVER_TEXT);
+  };
+
+  const handleDesignerMouseLeave = () => {
+    animateDesignerLabel(DESIGNER_DEFAULT_TEXT);
+  };
+
+  const handleCoderMouseEnter = () => {
+    animateCoderLabel(CODER_HOVER_TEXT);
+  };
+
+  const handleCoderMouseLeave = () => {
+    animateCoderLabel(CODER_DEFAULT_TEXT);
+  };
+
+  const handlePhotographerMouseEnter = () => {
+    animatePhotographerLabel(PHOTOGRAPHER_HOVER_TEXT);
+  };
+
+  const handlePhotographerMouseLeave = () => {
+    animatePhotographerLabel(PHOTOGRAPHER_DEFAULT_TEXT);
+  };
+
+  const handleVolleyballMouseEnter = () => {
+    animateVolleyballLabel(VOLLEYBALL_HOVER_TEXT);
+  };
+
+  const handleVolleyballMouseLeave = () => {
+    animateVolleyballLabel(VOLLEYBALL_DEFAULT_TEXT);
+  };
+
+  const handleNameMouseEnter = () => {
+    animateNameLabel(NAME_HOVER_TEXT);
+  };
+
+  const handleNameMouseLeave = () => {
+    animateNameLabel(NAME_TEXT);
+  };
 
   // Save scroll position before navigating away
   const handleProjectClick = () => {
@@ -84,27 +223,16 @@ export default function Home() {
     setCurrentPhotoIndex((prev) => (prev - 1 + photos.length) % photos.length);
   };
 
-  const tooltips = {
-    designer: "I like observing and listening to users",
-    coder: "Fueling the itch to create",
-    photographer: "Canon R8 24-105 @hirooaoy_",
-    volleyball: "Setter • Supporting Team Japan"
-  };
-
-  const showTooltip = (key: string) => {
-    setActiveTooltip(key);
-  };
-
-  const hideTooltip = () => {
-    setActiveTooltip(null);
-  };
-
   return (
     <div className={`min-h-screen transition-colors duration-700 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <div className="max-w-[1200px] mx-auto px-8 md:px-16 pt-48 md:pt-80 pb-48 md:pb-64">
         {/* Header */}
         <header className="mb-32 md:mb-48">
-          <h1 className="text-2xl font-normal mb-16">Hiroo Aoyama</h1>
+          <h1 className="text-2xl font-normal mb-16" aria-label={NAME_TEXT}>
+            <span onMouseEnter={handleNameMouseEnter} onMouseLeave={handleNameMouseLeave}>
+              {displayName}
+            </span>
+          </h1>
           
           <div className="flex items-start gap-8 md:gap-32">
             <div className="flex flex-col gap-2">
@@ -116,20 +244,11 @@ export default function Home() {
                   Day time
                 </button>
                 <p className={`transition-opacity duration-500 ${!isDarkMode ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                  <span className="relative inline-block">
-                    <span 
-                      className="cursor-palette"
-                      onMouseEnter={() => showTooltip('designer')}
-                      onMouseLeave={hideTooltip}
-                    >
-                      Product Designer
-                    </span>
-                    {activeTooltip === 'designer' && (
-                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-black text-white px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
-                        {tooltips.designer}
-                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-black"></span>
-                      </span>
-                    )}
+                  <span
+                    onMouseEnter={handleDesignerMouseEnter}
+                    onMouseLeave={handleDesignerMouseLeave}
+                  >
+                    {designerLabel}
                   </span>
                 </p>
               </div>
@@ -141,50 +260,23 @@ export default function Home() {
                   Night time
                 </button>
                 <p className={`transition-opacity duration-500 ${isDarkMode ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                  <span className="relative inline-block">
-                    <span 
-                      className="cursor-laptop"
-                      onMouseEnter={() => showTooltip('coder')}
-                      onMouseLeave={hideTooltip}
-                    >
-                      Vibe coder
-                    </span>
-                    {activeTooltip === 'coder' && (
-                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
-                        {tooltips.coder}
-                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
-                      </span>
-                    )}
+                  <span
+                    onMouseEnter={handleCoderMouseEnter}
+                    onMouseLeave={handleCoderMouseLeave}
+                  >
+                    {coderLabel}
                   </span>
-                  , <span className="relative inline-block">
-                    <span 
-                      className="cursor-camera"
-                      onMouseEnter={() => showTooltip('photographer')}
-                      onMouseLeave={hideTooltip}
-                    >
-                      photographer
-                    </span>
-                    {activeTooltip === 'photographer' && (
-                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
-                        {tooltips.photographer}
-                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
-                      </span>
-                    )}
+                  , <span
+                    onMouseEnter={handlePhotographerMouseEnter}
+                    onMouseLeave={handlePhotographerMouseLeave}
+                  >
+                    {photographerLabel}
                   </span>
-                  , <span className="relative inline-block">
-                    <span 
-                      className="cursor-volleyball"
-                      onMouseEnter={() => showTooltip('volleyball')}
-                      onMouseLeave={hideTooltip}
-                    >
-                      volleyball enthusiast
-                    </span>
-                    {activeTooltip === 'volleyball' && (
-                      <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-2 bg-white text-black px-3 py-2 rounded-lg text-sm z-10 shadow-lg whitespace-nowrap">
-                        {tooltips.volleyball}
-                        <span className="absolute left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 bottom-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-white"></span>
-                      </span>
-                    )}
+                  , <span
+                    onMouseEnter={handleVolleyballMouseEnter}
+                    onMouseLeave={handleVolleyballMouseLeave}
+                  >
+                    {volleyballLabel}
                   </span>
                 </p>
               </div>

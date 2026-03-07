@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import GlitchTitle from "../components/glitch-title";
 
 export default function InstagramLive() {
   const scrollToTop = () => {
@@ -17,7 +18,7 @@ export default function InstagramLive() {
         </Link>
 
         {/* Project Content */}
-        <h1 className="text-4xl font-normal mb-16">Instagram Live</h1>
+        <GlitchTitle text="Instagram Live" className="text-4xl font-normal mb-16" />
 
         {/* Project Content */}
         <div className="space-y-16">

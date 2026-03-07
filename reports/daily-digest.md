@@ -1,0 +1,93 @@
+# Daily Job Digest (2026-02-27)
+
+- Total fetched matching roles: 83
+- Visible roles (visa-eligible/unknown): 83
+- Skipped due to explicit no sponsorship: 0
+
+## Visible Roles
+- Duolingo | Senior Product Designer | https://careers.duolingo.com/jobs/8402493002?gh_jid=8402493002
+- Monzo | Senior Lead Product Designer, Operations | https://job-boards.greenhouse.io/monzo/jobs/7622277
+- GitLab | Staff Product Designer, Knowledge Graph | https://job-boards.greenhouse.io/gitlab/jobs/8360847002
+- Duolingo | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-duolingo-4369442941
+- Abtrace | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-abtrace-4362851231
+- Liberty. | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-liberty-4373334838
+- Jack & Jill | Lead Product Designer (£90k-£105k + Equity) at rapidly growing healthtech platform | https://uk.linkedin.com/jobs/view/lead-product-designer-%C2%A390k-%C2%A3105k-%2B-equity-at-rapidly-growing-healthtech-platform-at-jack-jill-4350895789
+- bp | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-bp-4356636947
+- Spotify | Senior Product Designer - Platform Design | https://uk.linkedin.com/jobs/view/senior-product-designer-platform-design-at-spotify-4365797275
+- Uncapped | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-uncapped-4368332057
+- Wheely | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-wheely-4375055197
+- Flagstone | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-flagstone-4362891395
+- Trustpilot | Senior Product Designer (Reviews and core) | https://uk.linkedin.com/jobs/view/senior-product-designer-reviews-and-core-at-trustpilot-4372232730
+- Photoroom | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-photoroom-4375455128
+- Tourism Marketing Agency | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-tourism-marketing-agency-4367242518
+- Zapp | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-zapp-4373974552
+- Tripadvisor | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-tripadvisor-4367126527
+- Zelt | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-zelt-4343943329
+- Candyspace | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-candyspace-4372632298
+- Amplify Recruitment | Product Designer (Mid-Senior) | https://uk.linkedin.com/jobs/view/product-designer-mid-senior-at-amplify-recruitment-4375242045
+- La Fosse | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-la-fosse-4374600460
+- Sentric | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-sentric-4355972276
+- Good Maven | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-good-maven-4336131680
+- Liviu Mesesan | Senior Product Designer (Product Reviews) | https://uk.linkedin.com/jobs/view/senior-product-designer-product-reviews-at-liviu-mesesan-4369697908
+- Checkout.com | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-checkout-com-4342083178
+- MyEdSpace | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-myedspace-4373828064
+- Icebrg.co | Senior UI/UX Designer (WealthTech Platform) | https://uk.linkedin.com/jobs/view/senior-ui-ux-designer-wealthtech-platform-at-icebrg-co-4378321478
+- Futureheads Recruitment | B Corp™ | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-futureheads-recruitment-b-corp%E2%84%A2-4371913675
+- Futureheads Recruitment | B Corp™ | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-futureheads-recruitment-b-corp%E2%84%A2-4372487803
+- Flo Health Inc. | Senior Product Designer (User-Centric) | https://uk.linkedin.com/jobs/view/senior-product-designer-user-centric-at-flo-health-inc-4362772604
+- Trading 212 | Principal Product Designer | https://uk.linkedin.com/jobs/view/principal-product-designer-at-trading-212-4369094715
+- Trust In SODA | Lead Product Designer | https://uk.linkedin.com/jobs/view/lead-product-designer-at-trust-in-soda-4372836683
+- Product Heroes | Senior Product Designer (Maternity Cover) - Moneyfarm | https://uk.linkedin.com/jobs/view/senior-product-designer-maternity-cover-moneyfarm-at-product-heroes-4358574774
+- Plum | Staff Product Designer | https://uk.linkedin.com/jobs/view/staff-product-designer-at-plum-4375534991
+- TripleTen | Staff Product Designer | https://uk.linkedin.com/jobs/view/staff-product-designer-at-tripleten-4376559914
+- Tripadvisor | Staff Product Designer | https://uk.linkedin.com/jobs/view/staff-product-designer-at-tripadvisor-4368235195
+- TripleTen Indonesia | Staff Product Designer | https://uk.linkedin.com/jobs/view/staff-product-designer-at-tripleten-indonesia-4375227000
+- Conveo | Staff Product Designer | https://uk.linkedin.com/jobs/view/staff-product-designer-at-conveo-4377863383
+- Plum | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-plum-4373581805
+- Experian | Senior Product Designer - Direct to Consumer | https://uk.linkedin.com/jobs/view/senior-product-designer-direct-to-consumer-at-experian-4372714523
+- PandaDoc | Senior Product Designer, Core UX & Mobile | https://uk.linkedin.com/jobs/view/senior-product-designer-core-ux-mobile-at-pandadoc-4376589475
+- Civica | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-civica-4363535248
+- Smartnumbers | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-smartnumbers-4374297615
+- Isometric | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-isometric-4366187376
+- Harness | Staff Product Designer, UI focused | https://uk.linkedin.com/jobs/view/staff-product-designer-ui-focused-at-harness-4345760065
+- AutogenAI | Product Designer (Mid–Senior), United Kingdom | https://uk.linkedin.com/jobs/view/product-designer-mid%E2%80%93senior-united-kingdom-at-autogenai-4367237563
+- Kraken | Staff Product Designer - Breakout | https://uk.linkedin.com/jobs/view/staff-product-designer-breakout-at-kraken-4372577269
+- Futureheads Recruitment | B Corp™ | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-futureheads-recruitment-b-corp%E2%84%A2-4374279485
+- Landytech | Senior Product Designer - B2B SaaS Fintech | https://uk.linkedin.com/jobs/view/senior-product-designer-b2b-saas-fintech-at-landytech-4363162753
+- Good Maven | Principal Product Designer | https://uk.linkedin.com/jobs/view/principal-product-designer-at-good-maven-4361164686
+- Thriva | Senior Product Designer (maternity cover) | https://uk.linkedin.com/jobs/view/senior-product-designer-maternity-cover-at-thriva-4370527154
+- rmg digital | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-rmg-digital-4371915885
+- Incard | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-incard-4369666742
+- MRJ Recruitment | Senior Product Designer (eCommerce) | https://uk.linkedin.com/jobs/view/senior-product-designer-ecommerce-at-mrj-recruitment-4374893786
+- Checkatrade | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-checkatrade-4356427243
+- Nscale | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-nscale-4368642466
+- Ventula Consulting | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-ventula-consulting-4370242501
+- StarRez, Inc. | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-starrez-inc-4369716753
+- Nothing | Senior Designer, Software Product Design | https://uk.linkedin.com/jobs/view/senior-designer-software-product-design-at-nothing-4368014098
+- Wise | Senior Product Designer - Receive | https://uk.linkedin.com/jobs/view/senior-product-designer-receive-at-wise-4323870577
+- Lawhive | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-lawhive-4369153317
+- Moneybox | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-moneybox-4375256093
+- Paired | Lead Product Designer | https://uk.linkedin.com/jobs/view/lead-product-designer-at-paired-4374374827
+- Intelligent People | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-intelligent-people-4374589603
+- FRASERS | Product Design Lead | https://uk.linkedin.com/jobs/view/product-design-lead-at-frasers-4376318851
+- Rightmove | Lead Product Designer (Web) | https://uk.linkedin.com/jobs/view/lead-product-designer-web-at-rightmove-4343635752
+- Checkatrade | Lead Product Designer | https://uk.linkedin.com/jobs/view/lead-product-designer-at-checkatrade-4341890085
+- Reed.co.uk | Lead Product Designer | https://uk.linkedin.com/jobs/view/lead-product-designer-at-reed-co-uk-4356441147
+- Encord | Senior Product Designer | https://uk.linkedin.com/jobs/view/senior-product-designer-at-encord-4378363835
+- Albert Bow | Lead Product Designer | https://uk.linkedin.com/jobs/view/lead-product-designer-at-albert-bow-4363169521
+- Teya | Principal Product Designer- Payments | https://uk.linkedin.com/jobs/view/principal-product-designer-payments-at-teya-4355023628
+- Care ADHD | Lead Product Designer (Discovery + Experience) | https://uk.linkedin.com/jobs/view/lead-product-designer-discovery-%2B-experience-at-care-adhd-4371791395
+- HTEC Momentum | Senior Product Designer (Contract or FTE) | https://uk.linkedin.com/jobs/view/senior-product-designer-contract-or-fte-at-htec-momentum-4369065745
+- DAYMADE | B2C Product Design Lead (Mobile Web UI/UX) | https://uk.linkedin.com/jobs/view/b2c-product-design-lead-mobile-web-ui-ux-at-daymade-4366716713
+- Virgin Active | Lead Product Designer | https://uk.linkedin.com/jobs/view/lead-product-designer-at-virgin-active-4378320769
+- Wise | Principal Product Designer | https://uk.linkedin.com/jobs/view/principal-product-designer-at-wise-4270285625
+- Zest Search | Principal Product Designer | https://uk.linkedin.com/jobs/view/principal-product-designer-at-zest-search-4378641635
+- Gravitas Recruitment Group (Global) Ltd | Principal Product Designer | https://uk.linkedin.com/jobs/view/principal-product-designer-at-gravitas-recruitment-group-global-ltd-4375516810
+- LSEG | Principal Product Designer | https://uk.linkedin.com/jobs/view/principal-product-designer-at-lseg-4327958466
+- Teya | Principal Product Designer - Banking | https://uk.linkedin.com/jobs/view/principal-product-designer-banking-at-teya-4310396127
+- BAE Systems | Senior/Principal AI Product Designer | https://uk.linkedin.com/jobs/view/senior-principal-ai-product-designer-at-bae-systems-4361174337
+- BAE Systems Digital Intelligence | Senior/Principal AI Product Designer | https://uk.linkedin.com/jobs/view/senior-principal-ai-product-designer-at-bae-systems-digital-intelligence-4361111472
+- ClearScore | Principal Product Designer (12 month FTC - Mat Cover) | https://uk.linkedin.com/jobs/view/principal-product-designer-12-month-ftc-mat-cover-at-clearscore-4375675406
+
+## Skipped (No Sponsorship)
+- None
